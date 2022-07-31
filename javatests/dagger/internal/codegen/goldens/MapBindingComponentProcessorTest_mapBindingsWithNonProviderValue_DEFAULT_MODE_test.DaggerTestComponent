@@ -1,5 +1,6 @@
 package test;
 
+import com.google.errorprone.annotations.CanIgnoreReturnValue;
 import dagger.internal.DaggerGenerated;
 import dagger.internal.MapFactory;
 import dagger.internal.Preconditions;
@@ -36,11 +37,13 @@ final class DaggerTestComponent {
     private Builder() {
     }
 
+    @CanIgnoreReturnValue
     public Builder mapModuleOne(MapModuleOne mapModuleOne) {
       this.mapModuleOne = Preconditions.checkNotNull(mapModuleOne);
       return this;
     }
 
+    @CanIgnoreReturnValue
     public Builder mapModuleTwo(MapModuleTwo mapModuleTwo) {
       this.mapModuleTwo = Preconditions.checkNotNull(mapModuleTwo);
       return this;

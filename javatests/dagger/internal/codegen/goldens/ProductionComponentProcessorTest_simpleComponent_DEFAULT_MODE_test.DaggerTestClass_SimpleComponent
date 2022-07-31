@@ -1,6 +1,7 @@
 package test;
 
 import com.google.common.util.concurrent.ListenableFuture;
+import com.google.errorprone.annotations.CanIgnoreReturnValue;
 import dagger.internal.DaggerGenerated;
 import dagger.internal.DoubleCheck;
 import dagger.internal.InstanceFactory;
@@ -43,11 +44,13 @@ final class DaggerTestClass_SimpleComponent {
     private Builder() {
     }
 
+    @CanIgnoreReturnValue
     public Builder aModule(TestClass.AModule aModule) {
       this.aModule = Preconditions.checkNotNull(aModule);
       return this;
     }
 
+    @CanIgnoreReturnValue
     public Builder bModule(TestClass.BModule bModule) {
       this.bModule = Preconditions.checkNotNull(bModule);
       return this;

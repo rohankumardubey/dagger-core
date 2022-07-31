@@ -1,5 +1,6 @@
 package test;
 
+import com.google.errorprone.annotations.CanIgnoreReturnValue;
 import dagger.internal.DaggerGenerated;
 import dagger.internal.Preconditions;
 import javax.annotation.processing.Generated;
@@ -25,6 +26,7 @@ final class DaggerSimpleComponent {
     private Integer i;
 
     @Override
+    @CanIgnoreReturnValue
     public Builder i(int i) {
       this.i = Preconditions.checkNotNull(i);
       return this;

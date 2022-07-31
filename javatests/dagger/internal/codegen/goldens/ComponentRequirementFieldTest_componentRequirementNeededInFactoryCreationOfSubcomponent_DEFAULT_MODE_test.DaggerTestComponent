@@ -1,5 +1,6 @@
 package test;
 
+import com.google.errorprone.annotations.CanIgnoreReturnValue;
 import dagger.internal.DaggerGenerated;
 import dagger.internal.Preconditions;
 import dagger.internal.SetFactory;
@@ -34,6 +35,7 @@ final class DaggerTestComponent {
     private Builder() {
     }
 
+    @CanIgnoreReturnValue
     public Builder parentModule(ParentModule parentModule) {
       this.parentModule = Preconditions.checkNotNull(parentModule);
       return this;

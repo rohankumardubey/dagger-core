@@ -38,6 +38,7 @@ import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.ImmutableSet;
 import com.google.common.collect.Maps;
 import com.google.common.collect.Sets;
+import com.google.errorprone.annotations.CanIgnoreReturnValue;
 import com.squareup.javapoet.CodeBlock;
 import com.squareup.javapoet.FieldSpec;
 import com.squareup.javapoet.MethodSpec;
@@ -258,7 +259,7 @@ final class ComponentCreatorImplementationFactory {
       MethodSpec built = method.build();
       return built.returnType.equals(TypeName.VOID)
           ? built
-          : method.addStatement("return this").build();
+          : method.addAnnotation(CanIgnoreReturnValue.class).addStatement("return this").build();
     }
 
     private void addFactoryMethod() {

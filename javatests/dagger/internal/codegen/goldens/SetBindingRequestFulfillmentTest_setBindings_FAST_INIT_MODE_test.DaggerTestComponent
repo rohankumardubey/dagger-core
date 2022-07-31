@@ -1,5 +1,6 @@
 package test;
 
+import com.google.errorprone.annotations.CanIgnoreReturnValue;
 import dagger.internal.DaggerGenerated;
 import dagger.internal.Preconditions;
 import dagger.internal.SetBuilder;
@@ -36,6 +37,7 @@ final class DaggerTestComponent {
      * @deprecated This module is declared, but an instance is not used in the component. This method is a no-op. For more, see https://dagger.dev/unused-modules.
      */
     @Deprecated
+    @CanIgnoreReturnValue
     public Builder setModule(SetModule setModule) {
       Preconditions.checkNotNull(setModule);
       return this;

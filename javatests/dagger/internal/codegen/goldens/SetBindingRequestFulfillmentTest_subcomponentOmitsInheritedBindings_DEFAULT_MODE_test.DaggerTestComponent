@@ -1,5 +1,6 @@
 package test;
 
+import com.google.errorprone.annotations.CanIgnoreReturnValue;
 import dagger.internal.DaggerGenerated;
 import dagger.internal.Preconditions;
 import java.util.Collections;
@@ -35,6 +36,7 @@ final class DaggerParent {
      * @deprecated This module is declared, but an instance is not used in the component. This method is a no-op. For more, see https://dagger.dev/unused-modules.
      */
     @Deprecated
+    @CanIgnoreReturnValue
     public Builder parentModule(ParentModule parentModule) {
       Preconditions.checkNotNull(parentModule);
       return this;

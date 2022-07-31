@@ -1,5 +1,6 @@
 package test;
 
+import com.google.errorprone.annotations.CanIgnoreReturnValue;
 import dagger.internal.DaggerGenerated;
 import dagger.internal.Preconditions;
 import javax.annotation.processing.Generated;
@@ -27,6 +28,7 @@ final class DaggerTestComponent {
     private Builder() {
     }
 
+    @CanIgnoreReturnValue
     public Builder dep(Dep dep) {
       this.dep = Preconditions.checkNotNull(dep);
       return this;

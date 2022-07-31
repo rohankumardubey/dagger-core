@@ -1,5 +1,6 @@
 package dagger.internal.codegen;
 
+import com.google.errorprone.annotations.CanIgnoreReturnValue;
 import dagger.internal.DaggerGenerated;
 import dagger.internal.DoubleCheck;
 import dagger.internal.Preconditions;
@@ -29,6 +30,7 @@ final class DaggerTestComponent {
     private Builder() {
     }
 
+    @CanIgnoreReturnValue
     public Builder dependency(Dependency dependency) {
       this.dependency = Preconditions.checkNotNull(dependency);
       return this;

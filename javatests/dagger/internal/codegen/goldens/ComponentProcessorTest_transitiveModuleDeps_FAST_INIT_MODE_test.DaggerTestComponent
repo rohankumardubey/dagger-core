@@ -1,5 +1,6 @@
 package test;
 
+import com.google.errorprone.annotations.CanIgnoreReturnValue;
 import dagger.internal.DaggerGenerated;
 import dagger.internal.Preconditions;
 import javax.annotation.processing.Generated;
@@ -33,6 +34,7 @@ final class DaggerTestComponent {
      * @deprecated This module is declared, but an instance is not used in the component. This method is a no-op. For more, see https://dagger.dev/unused-modules.
      */
     @Deprecated
+    @CanIgnoreReturnValue
     public Builder testModule(TestModule testModule) {
       Preconditions.checkNotNull(testModule);
       return this;
@@ -42,6 +44,7 @@ final class DaggerTestComponent {
      * @deprecated This module is declared, but an instance is not used in the component. This method is a no-op. For more, see https://dagger.dev/unused-modules.
      */
     @Deprecated
+    @CanIgnoreReturnValue
     public Builder parentTestIncluded(ParentTestIncluded parentTestIncluded) {
       Preconditions.checkNotNull(parentTestIncluded);
       return this;
@@ -51,6 +54,7 @@ final class DaggerTestComponent {
      * @deprecated This module is declared, but an instance is not used in the component. This method is a no-op. For more, see https://dagger.dev/unused-modules.
      */
     @Deprecated
+    @CanIgnoreReturnValue
     public Builder alwaysIncluded(AlwaysIncluded alwaysIncluded) {
       Preconditions.checkNotNull(alwaysIncluded);
       return this;
@@ -60,6 +64,7 @@ final class DaggerTestComponent {
      * @deprecated This module is declared, but an instance is not used in the component. This method is a no-op. For more, see https://dagger.dev/unused-modules.
      */
     @Deprecated
+    @CanIgnoreReturnValue
     public Builder depModule(DepModule depModule) {
       Preconditions.checkNotNull(depModule);
       return this;
@@ -69,6 +74,7 @@ final class DaggerTestComponent {
      * @deprecated This module is declared, but an instance is not used in the component. This method is a no-op. For more, see https://dagger.dev/unused-modules.
      */
     @Deprecated
+    @CanIgnoreReturnValue
     public Builder parentDepIncluded(ParentDepIncluded parentDepIncluded) {
       Preconditions.checkNotNull(parentDepIncluded);
       return this;
@@ -78,6 +84,7 @@ final class DaggerTestComponent {
      * @deprecated This module is declared, but an instance is not used in the component. This method is a no-op. For more, see https://dagger.dev/unused-modules.
      */
     @Deprecated
+    @CanIgnoreReturnValue
     public Builder refByDep(RefByDep refByDep) {
       Preconditions.checkNotNull(refByDep);
       return this;
